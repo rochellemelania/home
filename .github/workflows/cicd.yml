@@ -24,7 +24,7 @@ jobs:
       run: npm run build
 
     - name: Prepare artifact
-      run: mkdir artifact && cp -rL build/* artifact/
+      run: tar -c --dereference -f artifact.tar -C build . && mkdir artifact && tar -xf artifact.tar -C artifact
 
     - name: Upload page artifact
       uses: actions/upload-artifact@v4
