@@ -1,5 +1,5 @@
 name: CI/CD Pipeline
-
+# on github setting pages,  select github actions as the source
 on:
   push:
     branches: [ main ]
